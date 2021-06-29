@@ -72,22 +72,9 @@ let aboutScroll = window.addEventListener('scroll', function scrolling() {
         return
 })
 
+const usingsPercentPr = document.querySelectorAll('.usings__percent_pr');
+const lines = document.querySelectorAll('.usings__percent_card_bottom span');
 
-/*let aboutScroll = window.addEventListener('scroll', function scrolling() {
-    if (window.scrollY == 100) {
-        window.scrollBy(getOffset(about).left, getOffset(about).top);
-    } else
-    if (window.scrollY == getOffset(about).top) {
-        window.removeEventListener('scroll', getOffset)
-    } else
-        return
-}) */
-
-/*
-let aboutScroll = window.addEventListener('scroll', function() {
-    if (promo.offsetHeight == document.documentElement.clientHeight) {
-        window.scrollBy(getOffset(about).left, getOffset(about).top);
-    } else
-        return;
-})
-*/
+usingsPercentPr.forEach((item, i) => {
+    lines[i].style.width = item.innerHTML
+});

@@ -1,0 +1,53 @@
+.usings
+    padding: 120px 0 0 0
+    &__wrapper
+        margin-top: 60px
+        padding: 0 10px 0 11px
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows:  repeat(2, 1fr)
+        grid-auto-rows: 1fr
+        gap: 13px
+    &__card
+        padding: 30px 29px 25px 30px
+        border: 1px solid black
+        &_title
+            margin-top: 20px
+        &_text
+            font-size: 12px
+            line-height: 18px
+
+    &__percent
+        margin-top: 120px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows:  repeat(2, 1fr)
+        grid-auto-rows: 1fr
+        gap: 45px
+        &_card
+            display: flex
+            flex-direction: column
+            &_top
+                display: flex
+                justify-content: space-between
+                text-align: center
+            &_title
+                position: relative
+                @include before_circle
+                &:before
+                    top: -8px
+                    left: -13px
+            &_pr
+                font-size: 14px
+            &_bottom
+                margin-top: 20px
+                width: 350px
+                height: 14px
+                background-color: #E8E4DE
+                border-radius: 4px
+                span
+                    display: block
+                    height: 100%
+                    background-color: $main-color
+                    border-radius: 4px
+
