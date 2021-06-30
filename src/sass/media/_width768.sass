@@ -1,0 +1,72 @@
+@media (min-width: 768px) and (max-width: 899px)
+    .container
+        max-width: 720px
+    .sidepanel
+        display: none
+    .about
+        &__wrapper
+            grid-template-columns: minmax(240px, auto) minmax(400px, auto)
+            gap: 5px 15px
+        &__skills
+            grid-template: repeat(2, minmax(115px, auto))/repeat(2, 220px)
+            gap: 5px
+        &__subtitle
+            font-size: 30px
+        &__text
+            font-size: 11px
+            line-height: 22px
+        &__skills-item
+            grid-template-columns: 35px 170px
+            column-gap: 10px
+        &__skills-text
+            font-size: 10px
+    .usings
+        &__wrapper
+            grid-template-columns: 270px 270px
+            grid-template-rows: 1fr
+            justify-content: center
+            gap: 50px
+        &__percent
+            grid-template-columns: 300px 300px
+            grid-template-rows: 1fr
+            padding: 0 10px
+            justify-content: center
+    .portfolio
+        &__wrapper
+            grid-template-columns: 280px 280px
+            grid-template-rows: 1fr
+            justify-content: center
+            gap: 20px
+            .vertical, .horizonal
+                grid-column: 2/auto
+                grid-row: auto/auto
+        &__item
+            filter: none
+    .price
+        &__wrapper
+            grid-template-columns: minmax(250px, auto)
+            grid-template-rows: 1fr
+            justify-content: center
+            gap: 40px
+            margin-left: 0
+    .contacts
+        &__photo
+            display: none
+        &__wrapper
+            grid-template-columns: 1fr
+            padding: 0
+
+        &__form
+            display: flex
+            flex-direction: column
+            grid-column: 2/auto
+            input
+                height: 45px
+        &__subtitle
+            font-size: 29px
+        &__triggers
+            grid-template-columns: minmax(250px, auto)
+            gap: 20px
+            justify-content: flex-start
+        &__btn
+            grid-row: 2/2

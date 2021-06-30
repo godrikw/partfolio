@@ -1,0 +1,91 @@
+@media (min-width: 576px) and (max-width: 767px)
+    .container
+        max-width: 540px
+    .sidepanel
+        display: none
+    .about
+        &__wrapper
+            grid-template-columns: minmax(300px,auto)
+            gap: 5px 15px
+        &__skills
+            grid-template: minmax(115px, auto)/repeat(2, 1fr)
+            gap: 5px
+        &__subtitle
+            font-size: 20px
+            line-height: 35px
+        &__text
+            margin-top: 10px
+            font-size: 10px
+            line-height: 22px
+        &__skills-item
+            grid-template-columns: 35px 170px
+            column-gap: 10px
+        &__skills-text
+            font-size: 10px
+        &__skills-circle
+            padding: 5px 0 0 5px
+            img
+                width: 20px
+        &__photo
+            margin: 0 auto
+        &__descr
+            margin-top: 25px
+    .resume
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 70px 0
+    .usings
+        &__wrapper
+            grid-template-columns: 270px
+            grid-template-rows: 1fr
+            justify-content: center
+        &__percent
+            grid-template-columns: 300px
+            grid-template-rows: 1fr
+            padding: 0 10px
+            justify-content: center
+    .portfolio
+        &__wrapper
+            grid-template-columns: 280px
+            grid-template-rows: 1fr
+            justify-content: center
+            gap: 20px
+            .vertical, .horizonal
+                grid-column: 1/auto
+                grid-row: auto/auto
+        &__item
+            filter: none
+    .price
+        &__wrapper
+            grid-template-columns: minmax(250px, auto)
+            grid-template-rows: 1fr
+            justify-content: center
+            gap: 30px
+            margin-left: 0
+    .contacts
+        &__photo
+            display: none
+        &__wrapper
+            grid-template-columns: minmax(250px, auto)
+            padding: 0
+
+        &__form
+            display: flex
+            flex-direction: column
+            input
+                height: 45px
+        &__subtitle
+            font-size: 29px
+        &__triggers
+            grid-template-columns: minmax(250px, auto)
+            gap: 20px
+            justify-content: center
+        &__btn
+            grid-row: 2/2
+           
+        
+
+
+        
+
+                
