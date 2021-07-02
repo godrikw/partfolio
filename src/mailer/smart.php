@@ -1,8 +1,8 @@
 <?php 
 
 $name = $_POST['name'];
-$text = $_POST['text'];
 $email = $_POST['email'];
+$text = $_POST['text'];
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
@@ -11,15 +11,15 @@ $mail->CharSet = 'utf-8';
 // $mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = '';                 // Наш логин
-$mail->Password = '';                           // Наш пароль от ящика
+$mail->Username = 'peresvet_it@mail.ru';                 // Наш логин
+$mail->Password = 'acmQRa2Z1997';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('', 'Partfolio');   // От кого письмо 
-$mail->addAddress('');     // Add a recipient
+$mail->setFrom('peresvet_it@mail.ru', 'Partfolio');   // От кого письмо 
+$mail->addAddress('peresvet_it@mail.ru');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');

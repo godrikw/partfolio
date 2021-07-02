@@ -98,7 +98,7 @@ $(document).ready(function() {
     });
 
     //отправка формы
-    $('.contacts__form').submit(function(e) {
+    $('form').submit(function(e) {
         e.preventDefault();
         $.ajax({
             type: "POST",
@@ -107,7 +107,7 @@ $(document).ready(function() {
         }).done(function() {
             $(this).find("input").val("");
 
-            $('.contacts__form').trigger('reset');
+            $('form').trigger('reset');
         });
         return false;
     });
@@ -120,10 +120,5 @@ $(document).ready(function() {
             $('.pageup').fadeOut();
         }
     });
-    //плавная прокрутка
-    $("a[href=#up]").click(function() {
-        const _href = $(this).attr("href");
-        $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
-        return false;
-    });
+
 });
