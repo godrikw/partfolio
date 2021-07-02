@@ -1,7 +1,7 @@
 const hamburger = document.querySelector('.hamburger'),
     menu = document.querySelector('.menu'),
-    closeElem = document.querySelector('.menu__close');
-
+    closeElem = document.querySelector('.menu__close'),
+    menuLink = document.querySelectorAll('.menu__link a');
 const sidepanelPosition = document.querySelectorAll('.sidepanel-position');
 
 
@@ -13,6 +13,15 @@ hamburger.addEventListener('click', () => {
 closeElem.addEventListener('click', () => {
     menu.classList.remove('active');
 });
+
+menuLink.forEach((i) => {
+    i.addEventListener('click', () => {
+        menu.classList.remove('active');
+    });
+})
+
+
+
 
 //изменение цвета sidepanel
 let HeightSite = document.documentElement.clientHeight / 2; //высота экрана
@@ -77,4 +86,44 @@ const lines = document.querySelectorAll('.usings__percent_card_bottom span');
 
 usingsPercentPr.forEach((item, i) => {
     lines[i].style.width = item.innerHTML
+});
+
+
+$(document).ready(function() {
+    //плавная прокрутка
+    $("a").click(function() {
+        const _href = $(this).attr("href");
+        $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+        return false;
+    });
+
+    //отправка формы
+    $('.contacts__form').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+
+            $('.contacts__form').trigger('reset');
+        });
+        return false;
+    });
+
+    //up scroll
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
+    });
+    //плавная прокрутка
+    $("a[href=#up]").click(function() {
+        const _href = $(this).attr("href");
+        $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+        return false;
+    });
 });
